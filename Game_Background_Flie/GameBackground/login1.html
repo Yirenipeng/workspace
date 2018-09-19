@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+
+<script src="static/js/jquery.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="static/js/cloud.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="static/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="static/css/login.css">
+		<link id="layuicss-skincodecss" rel="stylesheet" href="static/css/code.css" media="all">
+		<link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/index.css">
+		<link rel="stylesheet" href="static/css/myCSS.css">
+
+</head>
+
+<body style="background-color:#1c77ac; background-image:url(static/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+    <div id="mainBody">
+      <div id="cloud1" class="cloud"></div>
+      <div id="cloud2" class="cloud"></div>
+    </div>  
+    <div class="loginbody">
+    
+    
+    
+    	<!--
+        	作者：sallxing@163.com
+        	时间：2018-09-14
+        	描述：登陆界面主体
+        -->
+		<div class="row" style="height: 600px;width: 80%;margin-top: 0%;margin-left: 10%;">
+				<div class="layui-carousel layui-col-lg-offset2 layui-col-lg9" id="news" lay-filter="news">
+						<div carousel-item="">
+							<div>
+								<a href="#">
+								<img class="img-responsive" alt="" style="width: 100%;" src="img/产品中心.png" />
+								</a>
+							</div>
+							<div>
+								<a href="#">
+								<img class="img-responsive" alt="" style="width: 100%" src="img/创客工具.png" />
+								</a>
+							</div>
+							<div>
+								<a href="#">
+								<img class="img-responsive" alt="" style="width: 100%" src="img/展示作品.png" />
+								</a>
+							</div>
+							<div>
+								<a href="#">
+								<img class="img-responsive" alt="" style="width: 100%" src="img/教学机器人系列02.png" />
+								</a>
+							</div>
+							<div>
+								<a href="#">
+								<img class="img-responsive" alt="" style="width: 100%" src="img/竞赛机器人系列01.png" />
+								</a>
+							</div>
+						</div>
+					</div>
+
+			<div class=" login_div  layui-col-lg" id="login_carousel" lay-anim="fade" lay-indicator="none" lay-arrow="none" >
+				<div class="login  layui-anim-up">
+					<div class="layui-logo" style="font-size: 35px;">
+						<font color="#1ba7e6">彼</font>
+						<font color="#1ba7e6">林</font>
+					</div>
+					<fieldset class="layui-elem-field layui-field-title">
+						<legend class="text-white">上海人工智能大赛平台</legend>
+					</fieldset>
+					<div class="layui-form" action="" method="post">
+						<div class="layui-form-item">
+							<input type="text" id="account" lay-verify="required|account" maxlength="20" placeholder="账号" autocomplete="off" autofocus="autofocus" class="layui-input">
+						</div>
+						<div class="layui-form-item">
+							<input type="password" id="password" lay-verify="required" maxlength="20" placeholder="请输入密码" autocomplete="off" class="layui-input">
+						</div>
+						<button class="login_btn layui-btn layui-btn-radius layui-btn-normal" lay-submit="" lay-filter="login">登录</button>
+					</div>
+					<hr class="layui-bg-gray">
+					<div class="layui-footer text-white">
+						<!-- 底部固定区域 -->
+						©2018 上海彼林电子科技有限公司
+					</div>
+				</div>
+				</div>
+				
+		</div>
+	
+	
+		<!--
+        	作者：sallxing@163.com
+        	时间：2018-09-14
+        	描述：Foot
+        -->
+		<!--<div class="global_footer ">-->
+			<div class="warpper">
+				<div class="content ">
+				<div class="copy_write">
+					<div>Copyright © 2018 上海彼林电子科技有限公司版权所有<br>网站备案／许可证号：沪ICP备15056299号</div>
+					<div class="gongan"><img src="./img/商标.png" style="width: 12px;height: 12px;" alt="沪公网安备：12345678901234号"><span style="margin-top: 2px;">沪公网安备：12345678901234号</span></div>
+				</div>
+			</div>
+		</div>
+       <!--</div>-->
+    
+    
+    
+</body>
+
+
+
+
+
+<script type="text/javascript" src="static/js/jquery-1.4.2.min.js"></script>
+		<script src="static/layui/layui.js"></script>
+		<script>
+		layui.use(['carousel', 'form', 'element'], function() {
+			var carousel = layui.carousel,
+				form = layui.form;
+			var $ = layui.jquery,
+				element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+			//新闻图片轮播
+			carousel.render({
+				elem: '#news',
+				/*width: '100%',*/
+				height: '400px',
+				interval: 3000,
+				anim: 'updown',
+				arrow: 'none',
+			});
+
+		});
+	</script>
+	<script>
+		$(function() {
+			setTimeout(function() {
+				$self_adaption();
+			}, 400);
+			//浏览器大小发生变化时
+			$(window).resize(function() {
+				$self_adaption();
+			});
+			//自适应界面函数
+			function $self_adaption() {
+				if($(window).width() < 600) {
+					$(".login").css({
+						"margin-left": "0%"
+					});
+					$(".column").css({
+						"height": "235px"
+					});
+					if($(window).width() < 400) {
+						$(".global_footer .warpper .btm+.btm").css({
+							"margin-left": "20px"
+						});
+					}
+					$(".carousel-caption").css({
+						"padding-bottom": "55px"
+					});
+
+					$("#Carousel").css({
+						"height": "200px"
+					});
+					$(".global_footer .warpper ").css({
+						"width": "90%",
+						"margin-left": "9%",
+						"float": "left"
+					});
+
+					$(".global_footer .warpper .contact_us").css({
+						"margin-top": "20px",
+						"margin-left": "-12px",
+						"float": "left"
+					});
+					$(".copy_write").css({
+						"padding-top": "110px"
+					});
+					$("#news").css({
+						"height": "200px",
+						"width": "100%"
+					});
+
+				} else if($(window).width() > 600 && $(window).width() < 1200) {
+						$(".login").css({
+						"margin-left": "2%"
+						});
+					if($(window).width() < 800) {
+						$("#news").css({
+							"margin-top": "2%",
+							"height": "300px",
+							"width": "100%"
+						});
+					} else {
+						$("#news").css({
+							"margin-top": "15%",
+							"height": "300px",
+							"width": "100%"
+						});
+					}
+					$("#Carousel").css({
+						"height": "300px"
+					});
+					$(".global_footer .warpper .contact_us").css({
+						"float": ""
+					});
+
+				} else if($(window).width() >= 1200) {
+					$(".login").css({
+						"margin-left": "10%"
+					});
+					$(".column").css({
+						"height": "300px"
+					});
+					$("#news").css({
+						"margin-top": "10%",
+						"height": "400px",
+						"max-width": "600px"
+					});
+					$("#Carousel").css({
+						"height": "500px"
+					});
+					$(".global_footer .warpper .contact_us").css({
+						"float": ""
+					});
+				}
+			}
+			//[END]监听浏览器大小(响应式布局)
+		})
+	</script>
+
+
+
+
+</html>

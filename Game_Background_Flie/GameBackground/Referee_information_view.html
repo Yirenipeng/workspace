@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>裁判详情信息</title>
+		<link rel="stylesheet" href="static/layui/css/layui.css" media="all">
+		<script type="text/javascript" src="static/js/jquery-1.4.2.min.js"></script>
+		<script src="static/layui/layui.js"></script>
+		<script src="static/js/Currency.js"></script>
+	</head>
+
+	<body class="layui-container">
+		<form class="layui-form" action="" lay-filter="example" style="margin-top: 5%;">
+			<div class="layui-form-item">
+				<label class="layui-form-label">负责项目：</label>
+				<div class="layui-input-block">
+					<input type="text" name="TOOL_NAME" lay-verify="TOOL_NAME" autocomplete="off" placeholder="请输入参赛项目" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">组别：</label>
+				<div class="layui-input-block">
+					<input type="radio" name="sex" value="小学组" title="小学组" checked="">
+					<input type="radio" name="sex" value="初中组" title="初中组">
+					<input type="radio" name="sex" value="高中组" title="高中组">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">用户名：</label>
+				<div class="layui-input-inline">
+					<input type="text" name="NUIT_PRICE" lay-verify="NUIT_PRICE" autocomplete="off" placeholder="请输入学校" class="layui-input">
+				</div>
+				<div class="layui-form-item" pane="">
+				<label class="layui-form-label">姓名：</label>
+				<div class="layui-input-block">
+					<input type="text" name="NUIT_PRICE" lay-verify="NUIT_PRICE" autocomplete="off" placeholder="请输入区域" class="layui-input">
+				</div>
+			</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label" >性别：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="NUIT_PRICE" lay-verify="NUIT_PRICE" autocomplete="off" placeholder="请输入参赛队伍1信息" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label" >联系方式：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="NUIT_PRICE" lay-verify="NUIT_PRICE" autocomplete="off" placeholder="请输入参赛队伍2信息" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label" >职责：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="NUIT_PRICE" lay-verify="NUIT_PRICE" autocomplete="off" placeholder="请输入参赛队伍2信息" class="layui-input">
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item BeiZhu" >
+				<div class="layui-block">
+					<label class="layui-form-label" >备注：</label>
+					<div class="layui-input-block">
+						<textarea name="CLIENT_MESSAGES" placeholder="请输入备注信息" class="layui-textarea CLIENT_MESSAGES"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<button class="layui-btn layui-bg-blue" style="margin-left: 36%;">返回</button>
+			</div>
+		</form>
+	</body>
+	<script>
+			layui.use(['form', 'layer',], function() {
+			var form = layui.form,
+				layer = layui.layer;
+
+
+
+			//表单初始赋值
+			form.val('example', {
+			})
+
+		});
+			
+			
+	</script>
+	
+	
+</html>
